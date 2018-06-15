@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="user" method="upgrade">
+	<name>PLG_USER_REGISTRATIONFORM</name>
+	<creationDate>Giugno 2018</creationDate>
+	<author>SPEDI srl</author>
+	<copyright>Copyright (C) SPEDI srl</copyright>
+	<license>GNU/GPL http://www.gnu.org/licenses</license>
+	<authorEmail>sviluppo@spedi.it</authorEmail>
+	<authorUrl>http://www.spedi.it</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_USER_REGISTRATIONFORM_DESC</description>
+	<files>
+		<filename plugin="registrationform">registrationform.php</filename>
+		<filename>index.html</filename>
+		<folder>sql</folder>
+		<folder>language</folder>
+	</files>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+</extension>
